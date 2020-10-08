@@ -49,6 +49,7 @@ public class Activity {
         System.out.println("What's the duration of the Activity?");
         duration = setActivityDuration.nextInt();
         ToDoList.add(duration);
+        duration;
 
     }
 
