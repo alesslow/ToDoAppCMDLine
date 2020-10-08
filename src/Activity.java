@@ -52,42 +52,4 @@ public class Activity {
 
     }
 
-    public void setName () {
-        ToDoList = new ArrayList();
-        System.out.println("What kind of Activity would you like to add to the List?");
-        setActivityName.nextLine();
-        ToDoList.add(name);
-    }
-
-    public void setLocation () {
-        System.out.println("At what Location will this Activity take place?");
-        setActivityLocation.nextLine();
-        ToDoList.add(location);
-    }
-
-    public void setBegin () {
-        System.out.println("When does the activity begin?");
-       // setActivityBegin.nextLine();
-        System.out.println("am/pm?");
-        setActivityAmPm.nextLine();
-      //  ToDoList.add(begin + AmPm);
-    }
-
-    public void setEnd () {
-        System.out.println("When does the activity end?");
-       // setActivityBegin.nextLine();
-        System.out.println("am/pm?");
-        setActivityAmPm.nextLine();
-     //   ToDoList.add(end + AmPm);
-    }
-
-    public void setDuration(){
-        System.out.println("What's the duration of the Activity?");
-        setActivityDuration.nextLine();
-        ToDoList.add(duration);
-    }
-
-
-
-
 }
