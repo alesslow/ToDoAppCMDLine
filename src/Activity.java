@@ -12,9 +12,11 @@ public class Activity {
     String name;
     String location;
     String dateDay ;
-    String timeOfDay;
+    String AmPm = " am/pm";
+    int timeOfDay;
     int duration;
     int end;
+
 
     public void setActivity() {
 
@@ -37,19 +39,38 @@ public class Activity {
 
         System.out.println("At what date and time?");
         dateDay = setActivityDate.nextLine();
-        timeOfDay = setActivityDate.nextLine();
-        ToDoList.add(dateDay + timeOfDay);
+        timeOfDay = setActivityDate.nextInt();
+        ToDoList.add(dateDay);
+        ToDoList.add(timeOfDay);
         System.out.println();
         System.out.println("The date and time of " + "'" + name + "'" + " at " + "'" + location + "'" + " are");
         System.out.println(dateDay);
-        System.out.println(timeOfDay);
+        System.out.println(timeOfDay + "am/pm");
+
 
         System.out.println();
 
         System.out.println("What's the duration of the Activity?");
         duration = setActivityDuration.nextInt();
         ToDoList.add(duration);
-        duration;
+        System.out.println(name + " at " + location + " on the " +
+                        dateDay + " at " + timeOfDay + AmPm + " will take " +
+                        duration + " hours");
+        end = duration + timeOfDay;
+
+
+        System.out.println();
+        System.out.println();
+        if (ToDoList.contains(duration)){
+            System.out.println(name);
+            System.out.println(location);
+            System.out.println(dateDay);
+            System.out.println(timeOfDay + AmPm);
+            System.out.println(duration + " hour duration");
+            System.out.println("ends at " + end);
+
+
+        }
 
     }
 
