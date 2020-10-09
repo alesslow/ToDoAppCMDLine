@@ -3,18 +3,18 @@ import java.util.*;
 
 public class ToDoLaunch {
 
-
     public static void main(String[]args) {
 
-         Activity activity1 = new Activity();
-         activity1.createActivity();
+         Activity activity = new Activity();
+         activity.createActivity();
 
-         Activity activity2 = new Activity();
-         activity2.createActivity();
-
-         System.out.println(activity1.ToDoList);
+         System.out.println(activity.ActivityDetails);
          System.out.println();
-         System.out.println(activity2.ToDoList);
 
+         ArrayList<Activity> ToDoList = new ArrayList<>();
+         ToDoList.add(activity);
+         System.out.println();
+         System.out.println(ToDoList);
     }
+
 }
