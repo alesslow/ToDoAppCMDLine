@@ -5,14 +5,12 @@ public class ToDoLaunch {
 
     public static void main(String[]args) {
 
-         ActivityList activityList = new ActivityList();
-         activityList.createActivity();
-         System.out.println(activityList.ActivityDetails);
-         System.out.println();
+        ToDoMenu toDoMenu = new ToDoMenu();
+        toDoMenu.startToDoList();
+       //  ctivityList activityList = new ActivityList();
+       //  activityList.createActivity();
 
          ArrayList<ArrayList> ToDoList = new ArrayList<>();
-         ToDoList.add(activityList.ActivityDetails);
-
          System.out.println();
          System.out.println(ToDoList);
     }

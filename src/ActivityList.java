@@ -1,32 +1,25 @@
 import java.util.*;
 import java.io.*;
 
-public class ActivityList extends ToDoList {
-    Scanner scanActivityName = new Scanner(System.in);
-    Scanner scanActivityLocation = new Scanner(System.in);
-    Scanner scanActivityDate = new Scanner(System.in);
-    Scanner scanActivityDuration = new Scanner(System.in);
+public class ActivityList extends ToDoMenu {
+
+    Scanner scanActivityDetails = new Scanner(System.in);
     Scanner scanAddAnother = new Scanner(System.in);
 
     ArrayList ActivityDetails;
-   // String name;
-   // String location;
-   // String dateDay;
-   // String AmPm;
-   // int timeOfDay;
-   // int duration;
-   // int end;
-   // boolean addAnother;
 
-    ActivityList() {
-        System.out.print("This is the Contructor of ActivityList");
-        System.out.println();
-
-    }
-
+        ActivityList() {
+            System.out.println();
+            System.out.println("Constructor of Activitylist");
+            System.out.println("You have created an ActivityList");
+        }
 
 
     public void createActivity(){
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
         this.setName();
         this.setLocation();
         this.setDate();
@@ -55,16 +48,15 @@ public class ActivityList extends ToDoList {
 
         ActivityDetails = new ArrayList();
         System.out.println("What kind of Activity would you like to add to the List?");
-        name = scanActivityName.nextLine();
+        name = scanActivityDetails.nextLine();
         ActivityDetails.add(name);
         System.out.println("'" + name + "'" + "has been added to the List");
         System.out.println();
     }
 
     public void setLocation() {
-
             System.out.println("Where will you go " + "'" + name + "'" + " at?");
-            location = scanActivityLocation.nextLine();
+            location = scanActivityDetails.nextLine();
             ActivityDetails.add(location);
             System.out.print("'" + name + "' " + "will take place at " + "'" + location + "'");
             System.out.println();
@@ -73,9 +65,9 @@ public class ActivityList extends ToDoList {
 
     public void setDate() {
         System.out.println("When?");
-        date = scanActivityDate.nextLine();
-        timeOfDay = scanActivityDate.nextInt();
-        AmPm = scanActivityDate.next();
+        date = scanActivityDetails.nextLine();
+        timeOfDay = scanActivityDetails.nextInt();
+        AmPm = scanActivityDetails.next();
         ActivityDetails.add(date);
         ActivityDetails.add(timeOfDay + AmPm);
         System.out.println();
@@ -88,7 +80,7 @@ public class ActivityList extends ToDoList {
 
     public void setDuration() {
             System.out.println("What's the duration of the Activity?");
-            duration = scanActivityDuration.nextInt();
+            duration = scanActivityDetails.nextInt();
             if (duration > 1) {
                 ActivityDetails.add(duration + " hours");
             } else
