@@ -4,7 +4,6 @@ import java.io.*;
 public class GroceryList extends ToDoMenu {
     Scanner scanGrocery = new Scanner(System.in);
     Scanner scanStore = new Scanner(System.in);
-
     ArrayList Stores;
     ArrayList Groceries;
 

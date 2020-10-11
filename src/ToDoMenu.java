@@ -13,20 +13,27 @@ public class ToDoMenu implements Serializable {
     int duration;
     int end;
     boolean addAnother;
-    int i;
-
-
+    int one = 1;
+    int two = 2;
+    int three = 3;
 
     public void startToDoList() {
         System.out.println("'Welcome to the ToDo List'");
         System.out.println();
-        this.selectListType(true);
+        this.promptListType(true);
 
-
-
+        if (listType == 1){
+            this.selectActivityList();
+        }
+        if (listType == 2) {
+            this.selectGroceryList();
+        }
+        if (listType == 3) {
+            this.selectShoppingList();
+        }
     }
 
-    public void selectListType(boolean promptListType) {
+    public void promptListType(boolean promptListType) {
         if (promptListType == true) {
             System.out.println("What kind of List would you like to create?");
 
@@ -35,15 +42,27 @@ public class ToDoMenu implements Serializable {
             System.out.println("3. a shopping List?");
             System.out.println();
             System.out.println("select by pressing a number");
-            if (scanListType.nextInt() == 1){
-                listType = 1;
-                new ActivityList().createActivity();
+            listType = scanListType.nextInt();
 
-            }
-            
             System.out.println();
             System.out.println();
-            }
         }
     }
+
+
+    public void selectActivityList() {
+        new ActivityList().createActivity();
+    }
+
+    public void selectGroceryList() {
+        new GroceryList().setStore();
+    }
+
+    public void selectShoppingList() {
+        new ShoppingList();
+    }
+
+
+
+}
 
