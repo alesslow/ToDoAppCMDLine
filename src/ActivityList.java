@@ -16,27 +16,31 @@ public class ActivityList extends Activity {
         }
 
 
-    public void createActivity(){
-        listOfActivities = new ArrayList();
-        new Activity();
-        System.out.println();
-        System.out.println();
-        this.setName();
-        this.setLocation();
-        this.setDate();
-        this.setDuration();
+    public void createActivity() {
+            Activity activity1 = new Activity();
+            listOfActivities = new ArrayList();
 
-        System.out.println(ActivityDetails);
-        listOfActivities.add(ActivityDetails);
+            System.out.println();
+            System.out.println();
+            this.setName();
+            this.setLocation();
+            this.setDate();
+            this.setDuration();
 
-        System.out.println("Would you like to add another Activity?");
-        if (scanActivityDetails.hasNext("yes")) {
+            System.out.println(ActivityDetails);
+            listOfActivities.add(ActivityDetails);
+
+            System.out.println("Would you like to add another Activity?");
+            if (scanActivityDetails.hasNext("yes")) {
             createActivity();
             addAnother = true;
-        } else {
+            } else {
             System.out.println("Thanks for using the ToDoList");
-        }
+            }
     }
 
-}
+    public void addActivityToList(String activityName) {
+    }
+
+} //close class
 

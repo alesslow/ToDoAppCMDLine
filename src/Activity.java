@@ -36,6 +36,7 @@ public class Activity {
     public void setDate() {
         System.out.println("When?");
         date = scanActivityDetails.nextLine();
+
         timeOfDay = scanActivityDetails.nextInt();
         AmPm = scanActivityDetails.next();
         ActivityDetails.add(date);
@@ -46,7 +47,13 @@ public class Activity {
         System.out.println(timeOfDay + AmPm);
         System.out.println();
         System.out.println();
+
+        System.out.println("Invalid input. You have to type a string");
     }
+
+
+
+
 
     public void setDuration() {
         System.out.println("What's the duration of the Activity?");
@@ -90,4 +97,5 @@ public class Activity {
         System.out.println();
 
     }
-}
+
+} //close class

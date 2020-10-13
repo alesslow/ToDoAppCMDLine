@@ -1,5 +1,5 @@
 
-public class ShoppingList extends ToDoMenu {
+public class ShoppingList extends MenuReturner implements Item {
 
     ShoppingList(){
         System.out.println();
@@ -7,4 +7,9 @@ public class ShoppingList extends ToDoMenu {
         System.out.println("You have created a ShoppingList");
         System.out.println();
     }
-}
+
+    public void returnToMenu() {
+            startToDoList();
+        }
+    }
+ //close class

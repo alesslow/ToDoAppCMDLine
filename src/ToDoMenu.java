@@ -1,13 +1,17 @@
+import java.awt.*;
 import java.io.*;
 import java.util.*;
 
 public class ToDoMenu implements Serializable {
 
+    ToDoMenu() {
+        System.out.println("'Welcome to the ToDo List'");
+    }
+
     Scanner scanListType = new Scanner(System.in);
     public int listType;
 
     public void startToDoList() {
-        System.out.println("'Welcome to the ToDo List'");
         System.out.println();
         System.out.println("What kind of List would you like to create?");
 
@@ -16,21 +20,39 @@ public class ToDoMenu implements Serializable {
         System.out.println("3. a shopping List?");
         System.out.println();
         System.out.println("select by pressing a number");
-        listType = scanListType.nextInt();
+
+        try {
+            listType = scanListType.nextInt();
+            selectListType(listType);
+        } catch (InputMismatchException ex) {
+            System.out.println("Invalid Input. Enter a number");
+            listType = 4;
+        }
+        if (listType == 4) {
+            MenuReturner menuReturner = new MenuReturner();
+            menuReturner.returnToMenu();
+          //  listType = scanListType.nextInt();
+           // System.out.println("Back to Menu?");
+            //System.out.println(listType);
+            //selectListType(listType);
+        }
 
         System.out.println();
         System.out.println();
-
-        if (listType == 1){
-            this.selectActivityList();
-        }
-        if (listType == 2) {
-            this.selectGroceryList();
-        }
-        if (listType == 3) {
-            this.selectShoppingList();
-        }
     }
+
+        public void selectListType(int listType) {
+            if (listType == 1) {
+                this.selectActivityList();
+            }
+            if (listType == 2) {
+                this.selectGroceryList();
+            }
+            if (listType == 3) {
+                this.selectShoppingList();
+            }
+        }
+
 
     public void selectActivityList() {
         new ActivityList().createActivity();
@@ -41,10 +63,8 @@ public class ToDoMenu implements Serializable {
     }
 
     public void selectShoppingList() {
-        new ShoppingList();
+        new ShoppingList().returnToMenu();
     }
 
-
-
-}
+} //close class
 
