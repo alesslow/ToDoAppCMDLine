@@ -7,7 +7,6 @@ public class ToDoLaunch {
 
         ToDoMenu toDoMenu = new ToDoMenu();
         toDoMenu.startToDoList();
-       //  ctivityList activityList = new ActivityList();
        //  activityList.createActivity();
 
          ArrayList<ArrayList> ToDoList = new ArrayList<>();

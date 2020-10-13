@@ -2,20 +2,9 @@ import java.io.*;
 import java.util.*;
 
 public class ToDoMenu implements Serializable {
-    Scanner scanListType = new Scanner(System.in);
 
+    Scanner scanListType = new Scanner(System.in);
     public int listType;
-    String name;
-    String location;
-    String date;
-    String AmPm;
-    int timeOfDay;
-    int duration;
-    int end;
-    boolean addAnother;
-    int one = 1;
-    int two = 2;
-    int three = 3;
 
     public void startToDoList() {
         System.out.println("'Welcome to the ToDo List'");

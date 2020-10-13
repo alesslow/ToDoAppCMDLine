@@ -1,17 +1,18 @@
 import java.util.*;
 import java.io.*;
 
-public class ActivityList extends ToDoMenu {
+public class ActivityList extends Activity {
 
-    Scanner scanActivityDetails = new Scanner(System.in);
     Scanner scanAddAnother = new Scanner(System.in);
 
     ArrayList ActivityDetails;
 
+
         ActivityList() {
             System.out.println();
-            System.out.println("Constructor of Activitylist");
+            System.out.println("Constructor of ActivityList");
             System.out.println("You have created an ActivityList");
+            System.out.println();
         }
 
 
@@ -25,19 +26,23 @@ public class ActivityList extends ToDoMenu {
         this.setDate();
         this.setDuration();
 
+        System.out.println(ActivityDetails);
         System.out.println();
         System.out.println("Would you like to add another Activity?");
 
         if (scanAddAnother.nextLine().contains("yes")){
+            System.out.println(ActivityDetails);
             addAnother = true;
             System.out.println();
-            createActivity();
+          //  createActivity();
+            this.setName();
         } else {
             addAnother = false;
         }
         if (addAnother = false){
+            System.out.println(ActivityDetails);
             System.out.println("Thanks for using the ToDo List");
-            System.exit(1);
+          //  System.exit(1);
           //  Runtime.getRuntime().exit(1);
         }
 
@@ -121,7 +126,5 @@ public class ActivityList extends ToDoMenu {
 
             }
 
-
-
-    }
+}
 
