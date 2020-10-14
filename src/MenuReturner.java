@@ -1,11 +1,4 @@
-public class MenuReturner extends ToDoMenu {
+public interface MenuReturner {
 
-    public void returnToMenu() {
-        startToDoList();
-    }
-
-    public void changeList() {
-
-    }
-
+    public void returnToMenu();
 }

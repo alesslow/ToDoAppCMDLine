@@ -1,12 +1,20 @@
 import java.util.*;
-import java.io.*;
 
-public class GroceryList extends ToDoMenu {
+public class GroceryList extends ToDoMenu implements MenuReturner {
+
+
     Scanner scanGrocery = new Scanner(System.in);
     Scanner scanStore = new Scanner(System.in);
 
     ArrayList Stores;
     ArrayList Groceries;
+
+    public class Gocery extends Item {
+        @Override
+        public void setName(String name) {
+            setName(name);
+        }
+    }
 
     GroceryList(){
         System.out.println();
@@ -15,8 +23,21 @@ public class GroceryList extends ToDoMenu {
         System.out.println();
     }
 
+    public void addGrocery() {
+        System.out.println("Would you like to add a Grocery to the List?");
+        if (scanGrocery.hasNext("yes")) {
+
+        }
+    }
+
+    @Override
+    public void returnToMenu() {
+        startToDoList();
+    }
+
     public void createGroceryList() {
         this.setStore();
+        this.addGrocery();
     }
 
     public void setStore () {

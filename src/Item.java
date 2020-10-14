@@ -1,10 +1,12 @@
-public interface Item {
+import java.util.Scanner;
 
-    String name = "";
-    int price = 0;
+public class Item {
+    Scanner userInputName = new Scanner(System.in);
 
+    String name;
+    double price;
 
-
-    public void returnToMenu();
-
+    public void setName(String name) {
+        name = userInputName.nextLine();
+    }
 }

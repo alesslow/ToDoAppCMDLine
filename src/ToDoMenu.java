@@ -2,11 +2,8 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-public class ToDoMenu implements Serializable {
+public class ToDoMenu implements Serializable, MenuReturner {
 
-    ToDoMenu() {
-        System.out.println("'Welcome to the ToDo List'");
-    }
 
     Scanner scanListType = new Scanner(System.in);
     public int listType;
@@ -29,10 +26,10 @@ public class ToDoMenu implements Serializable {
             listType = 4;
         }
         if (listType == 4) {
-            MenuReturner menuReturner = new MenuReturner();
-            menuReturner.returnToMenu();
-          //  listType = scanListType.nextInt();
-           // System.out.println("Back to Menu?");
+           // MenuReturner menuReturner = new MenuReturner();
+          //  menuReturner.returnToMenu();
+            //  listType = scanListType.nextInt();
+            // System.out.println("Back to Menu?");
             //System.out.println(listType);
             //selectListType(listType);
         }
@@ -66,5 +63,8 @@ public class ToDoMenu implements Serializable {
         new ShoppingList().returnToMenu();
     }
 
+    @Override
+    public void returnToMenu() {
+    }
 } //close class
 

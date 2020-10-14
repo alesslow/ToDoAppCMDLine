@@ -47,8 +47,6 @@ public class Activity {
         System.out.println(timeOfDay + AmPm);
         System.out.println();
         System.out.println();
-
-        System.out.println("Invalid input. You have to type a string");
     }
 
 
