@@ -1,17 +1,12 @@
 
-public class ShoppingList implements MenuReturner {
+public class ShoppingList {
 
-    ShoppingList(){
+    ShoppingList() {
         System.out.println();
         System.out.println("Constructor of ShoppingList");
         System.out.println("You have created a ShoppingList");
         System.out.println();
 
-
-    }
-
-    @Override
-    public void returnToMenu() {
 
     }
 }

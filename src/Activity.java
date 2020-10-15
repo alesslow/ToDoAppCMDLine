@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Activity {
+public class Activity extends Task {
     Scanner scanActivityDetails = new Scanner(System.in);
 
     String name;

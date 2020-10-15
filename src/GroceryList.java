@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GroceryList extends ToDoMenu implements MenuReturner {
+public class GroceryList extends ListMenu implements MenuReturner {
 
 
     Scanner scanGrocery = new Scanner(System.in);
@@ -9,12 +9,6 @@ public class GroceryList extends ToDoMenu implements MenuReturner {
     ArrayList Stores;
     ArrayList Groceries;
 
-    public class Gocery extends Item {
-        @Override
-        public void setName(String name) {
-            setName(name);
-        }
-    }
 
     GroceryList(){
         System.out.println();

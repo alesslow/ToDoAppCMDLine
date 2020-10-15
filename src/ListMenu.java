@@ -2,7 +2,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-public class ToDoMenu implements Serializable, MenuReturner {
+public class ListMenu implements Serializable {
 
 
     Scanner scanListType = new Scanner(System.in);
@@ -60,11 +60,8 @@ public class ToDoMenu implements Serializable, MenuReturner {
     }
 
     public void selectShoppingList() {
-        new ShoppingList().returnToMenu();
+     //   new ShoppingList().returnToMenu();
     }
 
-    @Override
-    public void returnToMenu() {
-    }
 } //close class
 
