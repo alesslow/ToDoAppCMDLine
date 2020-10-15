@@ -6,6 +6,8 @@ public class LaunchApp {
     public static void main(String[] args) {
 
         Task task1 = new Task();
+        Grocery grocery = new Grocery();
+        grocery.setPrice();
 
         task1.setName();
         task1.setDate();

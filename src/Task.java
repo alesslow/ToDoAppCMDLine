@@ -2,23 +2,22 @@ import java.io.*;
 import java.util.*;
 
 public class Task {
-    Scanner scanTaskDetails = new Scanner(System.in);
+    Scanner scanDetails = new Scanner(System.in);
 
     String name;
     double date;
     int priority;
 
     public void setName() {
-        name = scanTaskDetails.nextLine();
-
+        name = scanDetails.nextLine();
     }
 
     public void setDate() {
-        date = scanTaskDetails.nextInt();
+        date = scanDetails.nextInt();
     }
 
     public void setTaskPriority() {
-        priority = scanTaskDetails.nextInt();
+        priority = scanDetails.nextInt();
     }
 
     public void printTaskDetails() {
@@ -29,8 +28,17 @@ public class Task {
 
 
 
-    public String getName(String taskName) {
-        return taskName;
+    public String getName() {
+        return name;
     }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public double getDate() {
+        return date;
+    }
+
 
 }
