@@ -5,18 +5,16 @@ public class LaunchApp {
 
     public static void main(String[] args) {
 
-        Task task1 = new Task();
-        Grocery grocery = new Grocery();
-        grocery.setPrice();
+        ToDoList todolist = new ToDoList();
+        todolist.addTasks();
+        todolist.printOutTasks();
 
-        task1.setName();
-        task1.setDate();
-        task1.setTaskPriority();
-        task1.printTaskDetails();
+     //   ListMenu listMenu = new ListMenu();
+      //  System.out.println("'Welcome to the ToDo List'");
+      //  listMenu.openListSelection();
+       // System.out.println();
+       // System.out.println("Goodbye!");
 
-     //   ToDoMenu toDoMenu = new ToDoMenu();
-        //   System.out.println("'Welcome to the ToDo List'");
-        //   toDoMenu.startToDoList();
 
 
         //  ArrayList<ArrayList> ToDoList = new ArrayList<>();

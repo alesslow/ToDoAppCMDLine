@@ -6,7 +6,8 @@ public class ActivityList extends Activity {
     Scanner scanAddAnother = new Scanner(System.in);
     boolean addAnother;
 
-    ArrayList listOfActivities;
+    ArrayList<ArrayList> listOfActivities;
+    Activity [] activities = new Activity[count];
 
         ActivityList() {
             System.out.println();
@@ -29,6 +30,7 @@ public class ActivityList extends Activity {
 
             System.out.println(ActivityDetails);
             listOfActivities.add(ActivityDetails);
+            System.out.println(listOfActivities);
 
             System.out.println("Would you like to add another Activity?");
             if (scanActivityDetails.hasNext("yes")) {

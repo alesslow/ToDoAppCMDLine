@@ -1,44 +1,51 @@
-import java.io.*;
 import java.util.*;
 
 public class Task {
-    Scanner scanDetails = new Scanner(System.in);
 
-    String name;
-    double date;
-    int priority;
+    ArrayList taskDetails;
 
-    public void setName() {
-        name = scanDetails.nextLine();
-    }
+        Scanner scanDetails = new Scanner(System.in);
+        String name;
+        double date;
+        int priority;
+        // ArrayList taskDetails
 
-    public void setDate() {
-        date = scanDetails.nextInt();
-    }
+        public Task setName() {
+            System.out.println();
+            System.out.println("Enter Name of Task");
+            name = scanDetails.nextLine();
+            return this;
+        }
 
-    public void setTaskPriority() {
-        priority = scanDetails.nextInt();
-    }
+        public void setDate() {
+            System.out.println();
+            System.out.println("Enter Date of Task");
+            date = scanDetails.nextInt();
+        }
 
-    public void printTaskDetails() {
-        System.out.println(name);
-        System.out.println(date +".");
-        System.out.println(priority);
-    }
+        public void setTaskPriority() {
+            System.out.println();
+            System.out.println("Enter Priority");
+            priority = scanDetails.nextInt();
+        }
+
+        public void printTaskDetails() {
+            System.out.println(name);
+            System.out.println(date + ".");
+            System.out.println(priority);
+        }
 
 
+        public  String getName() {
+            return name;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public int getPriority() {
+            return priority;
+        }
 
-    public int getPriority() {
-        return priority;
-    }
-
-    public double getDate() {
-        return date;
-    }
-
+        public double getDate() {
+            return date;
+        }
 
 }

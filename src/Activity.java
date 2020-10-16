@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 
 public class Activity extends Task {
@@ -11,23 +10,25 @@ public class Activity extends Task {
     int timeOfDay;
     int duration;
     int end;
+    int count;
 
     ArrayList ActivityDetails;
 
-    public void setName() {
+    public Task setName() {
 
         ActivityDetails = new ArrayList();
         System.out.println("What kind of Activity would you like to add to the List?");
         name = scanActivityDetails.nextLine();
-        ActivityDetails.add(name);
+        this.ActivityDetails.add(name);
         System.out.println("'" + name + "'" + "has been added to the List");
         System.out.println();
+        return null;
     }
 
     public void setLocation() {
         System.out.println("Where will you go " + "'" + name + "'" + " at?");
         location = scanActivityDetails.nextLine();
-        ActivityDetails.add(location);
+        this.ActivityDetails.add(location);
         System.out.print("'" + name + "' " + "will take place at " + "'" + location + "'");
         System.out.println();
         System.out.println();

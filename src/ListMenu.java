@@ -8,7 +8,7 @@ public class ListMenu implements Serializable {
     Scanner scanListType = new Scanner(System.in);
     public int listType;
 
-    public void startToDoList() {
+    public void openListSelection() {
         System.out.println();
         System.out.println("What kind of List would you like to create?");
 

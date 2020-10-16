@@ -24,10 +24,8 @@ public class GroceryList extends ListMenu implements MenuReturner {
         }
     }
 
-    @Override
-    public void returnToMenu() {
-        startToDoList();
-    }
+
+
 
     public void createGroceryList() {
         this.setStore();
@@ -43,5 +41,9 @@ public class GroceryList extends ListMenu implements MenuReturner {
     }
 
 
+    @Override
+    public void returnToMenu() {
+
+    }
 } //close class
 
