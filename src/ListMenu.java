@@ -12,9 +12,10 @@ public class ListMenu implements Serializable {
         System.out.println();
         System.out.println("What kind of List would you like to create?");
 
-        System.out.println("1. a normal List of Activities?");
+        System.out.println("1. a ToDoList");
         System.out.println("2. a Grocery List?");
         System.out.println("3. a shopping List?");
+        System.out.println("5. a normal List of Activities?");
         System.out.println();
         System.out.println("select by pressing a number");
 
@@ -23,9 +24,9 @@ public class ListMenu implements Serializable {
             selectListType(listType);
         } catch (InputMismatchException ex) {
             System.out.println("Invalid Input. Enter a number");
-            listType = 4;
+            listType = 0;
         }
-        if (listType == 4) {
+        if (listType == 0) {
            // MenuReturner menuReturner = new MenuReturner();
           //  menuReturner.returnToMenu();
             //  listType = scanListType.nextInt();
@@ -40,7 +41,7 @@ public class ListMenu implements Serializable {
 
         public void selectListType(int listType) {
             if (listType == 1) {
-                this.selectActivityList();
+                this.selectToDoList();
             }
             if (listType == 2) {
                 this.selectGroceryList();
@@ -48,8 +49,14 @@ public class ListMenu implements Serializable {
             if (listType == 3) {
                 this.selectShoppingList();
             }
+            if (listType == 5) {
+                this.selectActivityList();
+            }
         }
 
+    public void selectToDoList() {
+        new ToDoList().addTasks();
+    }
 
     public void selectActivityList() {
         new ActivityList().createActivity();

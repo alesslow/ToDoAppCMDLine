@@ -7,42 +7,50 @@ public class ActivityList extends Activity {
     boolean addAnother;
 
     ArrayList<ArrayList> listOfActivities;
-    Activity [] activities = new Activity[count];
 
-        ActivityList() {
-            System.out.println();
-            System.out.println("Constructor of ActivityList");
-            System.out.println("You have created an ActivityList");
-            System.out.println();
-        }
+
+
+    ActivityList() {
+        System.out.println();
+        //  listOfActivities = new ArrayList();
+        System.out.println("Constructor of ActivityList");
+        System.out.println("You have created an ActivityList");
+        System.out.println();
+    }
 
 
     public void createActivity() {
-            Activity activity1 = new Activity();
-            listOfActivities = new ArrayList();
 
-            System.out.println();
-            System.out.println();
-            this.setName();
-            this.setLocation();
-            this.setDate();
-            this.setDuration();
+        listOfActivities = new ArrayList();
 
-            System.out.println(ActivityDetails);
-            listOfActivities.add(ActivityDetails);
+        for (int count = 0; count < 3; count++) {
+
+            super.setName();
+            super.setLocation();
+            super.setDate();
+            super.setDuration();
+
+            listOfActivities.add(super.ActivityDetails);
             System.out.println(listOfActivities);
+            System.out.println();
+            System.out.println();
 
-            System.out.println("Would you like to add another Activity?");
-            if (scanActivityDetails.hasNext("yes")) {
-            createActivity();
-            addAnother = true;
-            } else {
-            System.out.println("Thanks for using the ToDoList");
+            if (count < 2) {
+                System.out.println("Would you like to add another Activity?");
+              if (scanAddAnother.hasNext("yes")){
+              }
+              else {
+                      System.out.println("Thanks for using the ToDoList");
+                      System.exit(1);
+              }
             }
-    }
 
-    public void addActivityToList(String activityName) {
-    }
+            }
 
-} //close class
 
+
+        //}
+
+
+    } //close class}
+}

@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Activity extends Task {
     Scanner scanActivityDetails = new Scanner(System.in);
+    ArrayList ActivityDetails;
 
     String name;
     String location;
@@ -11,8 +12,6 @@ public class Activity extends Task {
     int duration;
     int end;
     int count;
-
-    ArrayList ActivityDetails;
 
     public Task setName() {
 

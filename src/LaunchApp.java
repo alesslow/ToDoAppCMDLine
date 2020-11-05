@@ -5,9 +5,14 @@ public class LaunchApp {
 
     public static void main(String[] args) {
 
-        ToDoList todolist = new ToDoList();
-        todolist.addTasks();
-        todolist.printOutTasks();
+        ListMenu startMenu = new ListMenu();
+      //  startMenu.openListSelection();
+        ActivityList ac = new ActivityList();
+        ac.createActivity();
+
+       // ToDoList todolist = new ToDoList();
+       // todolist.addTasks();
+      //  todolist.printOutTasks();
 
      //   ListMenu listMenu = new ListMenu();
       //  System.out.println("'Welcome to the ToDo List'");

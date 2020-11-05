@@ -8,13 +8,16 @@ public class ToDoList {
     Task [] myTasks = new Task[5];
 
     public void taskAppearance() {
-        System.out.println("Hey im a Task");
+        System.out.println("You have created a normal ToDo List");
     }
+
+
 
     public void addTasks () {
         for (int i = 0; i<3; i++) {
             System.out.println("Hey set name for Task " + i);
             myTasks[i] = new Task().setName();
+
         }
     }
 
