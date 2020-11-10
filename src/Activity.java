@@ -1,8 +1,7 @@
 import java.util.*;
+import java.io.*;
 
 public class Activity extends Task {
-    Scanner scanActivityDetails = new Scanner(System.in);
-    ArrayList ActivityDetails;
 
     String name;
     String location;
@@ -13,19 +12,23 @@ public class Activity extends Task {
     int end;
     int count;
 
-    public Task setName() {
+    ArrayList ActivityDetails;
+    Scanner scanActivityDetails = new Scanner(System.in);
+
+    public void setName() {
 
         ActivityDetails = new ArrayList();
         System.out.println("What kind of Activity would you like to add to the List?");
         name = scanActivityDetails.nextLine();
+        name = scanActivityDetails.nextLine();
         this.ActivityDetails.add(name);
         System.out.println("'" + name + "'" + "has been added to the List");
         System.out.println();
-        return null;
     }
 
     public void setLocation() {
-        System.out.println("Where will you go " + "'" + name + "'" + " at?");
+
+        System.out.println("Where?");
         location = scanActivityDetails.nextLine();
         this.ActivityDetails.add(location);
         System.out.print("'" + name + "' " + "will take place at " + "'" + location + "'");
@@ -34,9 +37,9 @@ public class Activity extends Task {
     }
 
     public void setDate() {
+
         System.out.println("When?");
         date = scanActivityDetails.nextLine();
-
         timeOfDay = scanActivityDetails.nextInt();
         AmPm = scanActivityDetails.next();
         ActivityDetails.add(date);
@@ -49,17 +52,14 @@ public class Activity extends Task {
         System.out.println();
     }
 
-
-
-
-
     public void setDuration() {
-        System.out.println("What's the duration of the Activity?");
+
+        System.out.println("What's the duration?");
         duration = scanActivityDetails.nextInt();
+
         if (duration > 1) {
             ActivityDetails.add(duration + " hours");
-        } else
-        {
+        } else {
             ActivityDetails.add(duration + " hour");
         }
 
@@ -67,8 +67,7 @@ public class Activity extends Task {
             System.out.println(name + " at " + location + " on the " +
                     date + " at " + timeOfDay + AmPm + " and will take " +
                     duration + " hours");
-        } else
-        {
+        } else {
             System.out.println(name + " at " + location + " on the " +
                     date + " at " + timeOfDay + AmPm + " and will take " +
                     duration + " hour");
@@ -76,9 +75,6 @@ public class Activity extends Task {
 
         end = duration + timeOfDay;
         System.out.println();
-
-
-
         System.out.println(name);
         System.out.println(location);
         System.out.println(date);
@@ -93,7 +89,6 @@ public class Activity extends Task {
             ActivityDetails.add("ends at " + end + "pm");
         }
         System.out.println();
-
     }
 
 } //close class

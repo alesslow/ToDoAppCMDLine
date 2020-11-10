@@ -10,13 +10,23 @@ public class Task {
         int priority;
         int count;
 
+        String[] tasks = new String[]{name};
         ArrayList<Task> listOfTasks = new ArrayList<>();
         Task [] myTasks = new Task[count];
+        ArrayList mytasks = new ArrayList();
 
 
+    public void addTask() {
 
+        System.out.println("Enter a Task");
+        name = scanDetails.nextLine();
+        System.out.println(name + " was added to the list.");
+        mytasks.add(name);
+        System.out.println();
 
-        public Task setName() {
+    }
+
+        public Task setTaskName() {
             System.out.println();
             System.out.println("Enter Name of Task");
             name = scanDetails.nextLine();
